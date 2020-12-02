@@ -58,4 +58,4 @@ class CameraDashboard(models.Model):
     sum_of_storage_warning=models.CharField(max_length=50,null=True)
 
     def __str__(self):
-        return self.nvr_dvr
+        return self.location
