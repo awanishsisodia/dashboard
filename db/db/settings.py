@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['127.0.0.1','https://testforawanish.herokuapp.com/']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
