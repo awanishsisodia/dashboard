@@ -8,3 +8,4 @@ markdown
 django-filter
 pandas
 whitenoise
+virtualenv==20.0.34
