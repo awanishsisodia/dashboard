@@ -1,9 +1,15 @@
 <html lang="en-US"><head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Dashboard</title>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
 <title>Vigilant Technologies – Provider of products, solutions and services for physical safety and security management</title>
 <link rel="alternate" type="application/rss+xml" title="Vigilant Technologies » Feed" href="http://vigilanttechnologies.in/feed/">
 <link rel="alternate" type="application/rss+xml" title="Vigilant Technologies » Comments Feed" href="http://vigilanttechnologies.in/comments/feed/">
@@ -111,25 +117,27 @@ var huge_it_obj = {"nonce":"b4cc267178"};
 	<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a href="http://vigilanttechnologies.in/products/fire-solution/">Fire Solution</a></li>
 </ul>
 </li>
-<li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="http://vigilanttechnologies.in/solutions/">Solutions</a></li>
-<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42 dropdown"><a href="">Login & SignUp<span class="caret"></span></a>
-<ul class="dropdown-menu">
-	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="/customerlogin">Login</a></li>
-	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="/customersignup">SignUp</a></li>
-</ul>
-</li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/locsix-camdash">Camera DashBoard</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/my-profile">Profile</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/logout">Logout</a></li>
 <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42 dropdown"><a href="">More<span class="caret"></span></a>
 <ul class="dropdown-menu">
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="http://vigilanttechnologies.in/solutions/">Solutions</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="/send-feedback">Send Feedback</a></li>
+
 <li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="http://vigilanttechnologies.in/about-us/">About Us</a></li>
 <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://vigilanttechnologies.in/contact-us/">Contact Us</a></li>
-<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="/send-feedback">Send Feedback</a></li>
 </ul>
-</ul>
-</li>
 		</div>	</div>	</div>
 	</div>
 </nav>
 {% block content %}
 
-{% endblock content %}
+
+    <script>
+    $(document).ready(function(){
+      {% block jquery %}{% endblock %}
+    })</script>
+    {% endblock %}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>

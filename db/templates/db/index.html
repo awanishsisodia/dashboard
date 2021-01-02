@@ -240,73 +240,470 @@ body {
 }
   </style>
 
+  <div class="clearfix"></div>
+  <!-- Slider -->
+  <div id="main" role="main">
+  	<section class="slider">
+  		<ul class="slides">
+  				<li>
+  					<img alt="img" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/HomePageSlider-Img1.jpg">
+  					<div class="container">
+  						<div class="slide-caption">
+  														<h2>Experts in Building Management Solutions</h2>
 
-{%if products%}
-<h3 style="text-align:center; color:yellow;">{{word}}</h3>
-<br>
-<!-- products data starttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
-  <div class="row">
+  													</div>
+  					</div>
+  				</li>
+  			</ul>
+  	</section>
+  </div>
+  <!-- End of Slider -->
+  <div class="clearfix"></div>
+  <section class="header-title"><h2>Integration Automation and Analytics </h2></section>
+  <div class="clearfix"></div>
+  <!-- Service Section of index Page -->
+  <section id="section" class="service">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-12">
+  				<div class="section-title">
+  										<p>With an expertise of over 15 years in designing, implementing and managing security solution for our customers</p>
+  									</div>
+  			</div>
+  		</div>
+  				<div class="row busiprof-features-content">
+  	    			<div class="col-md-3 col-sm-6 col-xs-12 service-box">
+  			<div class="post">
 
-      {% for p in products %}
-      <!-- card1 -->
-      <div class="column">
-      <div class="container page-wrapper" style="width: 450px;">
-        <div class="page-inner">
-          <div class="row">
-            <div class="el-wrapper">
-              <div class="box-up">
-                <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px">
-                <div class="img-info">
-                  <div class="info-inner">
-                    <span style="background-color:#08050a; color:yellow;"class="p-company">{{p.name}}</span>
+  									<a href="#">
+  																		<div class="service-icon">
+  									<i class="fa fa-laptop"></i>
+  								</div>
 
-                  </div>
-                  <div class="a-size">{{p.description}}</div>
-                </div>
-              </div>
+  								<div class="entry-header">
+  								<h4 class="entry-title">Installation Services</h4>
+  								</div>
+  																	</a>
 
-              <div class="box-down">
-                <div class="h-bg">
-                  <div class="h-bg-inner"></div>
-                </div>
+  							<div class="entry-content">
+  							<p>Our teams of technical experts with years of experience will work with you on the proper testing and installation of the solution. </p>
+  							</div>
 
-                <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                  <span class="price">₹ {{p.price}}</span>
-                  <span class="add-to-cart">
-                    <span class="txt">Add in cart</span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
 
-<!-- card1 end -->
-{% if forloop.counter|divisibleby:"3" %}
-    </div>
+  									</div>
+  			</div>
+  						<div class="col-md-3 col-sm-6 col-xs-12 service-box">
+  			<div class="post">
 
-    <div class="row">
+  									<a href="#">
+  																		<div class="service-icon">
+  									<i class="fa fa-tasks"></i>
+  								</div>
 
-          <br><br><br><br><br>
-{% endif %}
-  {% endfor %}
-</div>
-<!-- products data enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
-{%else%}
-<h3 style="text-align:center; color:yellow;">No Search Found</h3>
-{%endif%}
+  								<div class="entry-header">
+  								<h4 class="entry-title">Maintenance  Service</h4>
+  								</div>
+  																	</a>
 
-<script>
-    {%if messages %}
-    {%for message in messages%}
-    alert('{{message}}');
-    {%endfor%}
-    {%endif%}
-</script>
-<br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+  							<div class="entry-content">
+  							<p>Get Health Check and Annual maintenance on the security products ensuring they are  working efficiently at all times.</p>
+  							</div>
+
+
+  									</div>
+  			</div>
+  						<div class="col-md-3 col-sm-6 col-xs-12 service-box">
+  			<div class="post">
+
+  									<a href="#">
+  																		<div class="service-icon">
+  									<i class="fa fa-thumbs-o-up"></i>
+  								</div>
+
+  								<div class="entry-header">
+  								<h4 class="entry-title">Integration Services</h4>
+  								</div>
+  																	</a>
+
+  							<div class="entry-content">
+  							<p>Get your security systems collaborate with each other ensuring quick and smart response </p>
+  							</div>
+
+
+  									</div>
+  			</div>
+  						<div class="col-md-3 col-sm-6 col-xs-12 service-box">
+  			<div class="post">
+
+  									<a href="#">
+  																		<div class="service-icon">
+  									<i class="fa fa-life-ring"></i>
+  								</div>
+
+  								<div class="entry-header">
+  								<h4 class="entry-title">API's and Development</h4>
+  								</div>
+  																	</a>
+
+  							<div class="entry-content">
+  							<p>Get support from our Software experts on development of any customized solution to serve your security or automation needs</p>
+  							</div>
+
+
+  									</div>
+  			</div>
+  					</div>
+  				<div class="clearfix"></div>
+  			<div class="col-md-12 col-xs-12">
+  				<div class="btn-wrap">
+  					<div class="services_more_btn">
+  												<a href="#">
+  					   More Services</a>
+
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  </section>
+
+  <!-- Projects Section of index Page -->
+  <!-- Portfolio Section -->
+  <section id="section" class="portfolio bg-color">
+  	<div class="container">
+  		<!-- Section Title -->
+  		<div class="row">
+  			<div class="col-md-12">
+  				<div class="section-title">
+  										<h1 class="section-heading">Our Projects					</h1>									</div>
+  			</div>
+  		</div>
+  		<!-- /Section Title -->
+
+
+  		<!-- Portfolio Item -->
+  	<div class="tab-content main-portfolio-section" id="myTabContent">
+  		<!-- Portfolio Item -->
+  			<div class="row">
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  														<a href="#">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-1.jpg" class="project_feature_img">
+  							</a>
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title"><a href="#">
+  								Shell Apparels</a>
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  														<a href="#">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-2.jpg" class="project_feature_img">
+  							</a>
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title"><a href="#">
+  								Puravankara®</a>
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  														<a href="#">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-3.jpg" class="project_feature_img">
+  							</a>
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title"><a href="#">
+  								Wistron</a>
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  														<a href="#">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-4.jpg" class="project_feature_img">
+  							</a>
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title"><a href="#">
+  								Mysuru Palace</a>
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+
+  				<!-- Start More Project Display -->
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-5.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								OTIS
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-6.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								TOTAL
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-7.png" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								R V Institutions
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-8.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								Sri Sathya Sai Institute of Higher Medical Sciences
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client-9.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								City Union Bank
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client10.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								Sterlite Tech
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client11.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								Godrej Tyson
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client12.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								British Council
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client13.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								Indian Red Cross Society
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client14.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								IIMB
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+  																					<img alt="" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/project-client15.jpg" class="project_feature_img">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+  																<h4 class="entry-title">
+  								The Leela Palace
+  																</h4>
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<div class="col-md-3 col-sm-6 col-xs-12">
+  					<aside class="post">
+  						<figure class="post-thumbnail">
+
+  						</figure>
+  						<div class="portfolio-info">
+  							<div class="entry-header">
+
+  							</div>
+  							<div class="entry-content">
+  															</div>
+  						</div>
+  					</aside>
+  				</div>
+  				<!-- End More Project Display -->
+
+  			</div>
+  	</div>
+  </div></section>
+  <!-- End of Portfolio Section -->
+  <div class="clearfix"></div>
+  <!-- footer Section of index blog -->
+  <!-- footer Section of index Testimonial -->
+  <!-- Footer Section -->
+  <footer class="footer-sidebar">
+  	<!-- Footer Widgets -->
+  	<div class="container">
+  		<div class="row">
+  					</div>
+  	</div>
+  	<!-- /End of Footer Widgets -->
+
+  	<!-- Copyrights -->
+  	<div class="site-info">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-7">
+  								<p>© Vigilant Technologies 2019. All Rights Reserved.</p> 								</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- Copyrights -->
+
+  </footer>
+  <!-- /End of Footer Section -->
+
+  <!--Scroll To Top-->
+  <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+  <!--/End of Scroll To Top-->
+  <script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var _wpcf7 = {"loaderUrl":"http:\/\/vigilanttechnologies.in\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.2"></script>
+  <script defer="" async="" type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=hugeit_forms_onloadCallback&amp;render=explicit&amp;ver=1.0.0"></script>
+  <script type="text/javascript" src="http://vigilanttechnologies.in/wp-includes/js/wp-embed.min.js?ver=4.5.1"></script>
+
 
 
 {% endblock content %}

@@ -6,7 +6,7 @@ class CustomerUserForm(forms.ModelForm):
 
     class Meta:
         model=User
-        fields=['first_name','last_name','username','password']
+        fields=['username','password']
         widgets = {
         'password': forms.PasswordInput()
         }
@@ -14,4 +14,9 @@ class CustomerUserForm(forms.ModelForm):
 class CustomerForm(forms.ModelForm):
     class Meta:
         model=models.Customer
-        fields=['address','mobile','profile_pic']
+        fields=['email','mobile','profile_pic']
+
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model=models.Feedback
+        fields=['name','feedback']

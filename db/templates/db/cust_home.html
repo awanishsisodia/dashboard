@@ -1,133 +1,15 @@
-<!DOCTYPE html>
-{% load widget_tweaks %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>SIGNUP
-      |Vigilant Technologies – Provider of products, solutions and services for physical safety and security management</title>
-
-    <style media="screen">
-      body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0)
-}
-
-.box {
-    width: 400px;
-    padding: 40px;
-    position: absolute;
-    top: 0px;
-    left: 70%;
-    background-color:#2d3b52;
-    ;
-    text-align: center;
-    transition: 0.25s;
-    margin-top: 0px;
-    margin-left: 80%;
-    border-radius: 2px;
-    border-width: 10px;
-    border-color: lightgray;
-    margin-right: 0px;
-}
-
-.box input[type="text"],
-.box input[type="password"],
-.box input[type="email"] {
-    border: 2px;
-    background:none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: black;
-    border-radius: 24px;
-    transition: 0.25s
-}
-
-.box h1 {
-    color: black;
-    text-transform: uppercase;
-    font-weight: 500
-}
+{% extends 'db/bangalorebase.html' %}
+{% load static %}
+{% block content %}
 
 
-}
-.box input[type="text"]:focus,
-.box input[type="password"]:focus,
- {
-    width: 300px;
-    border-color: #2ecc71
-}
-
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
-    color: blue;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer
-}
-
-.box input[type="submit"]:hover {
-    background: #2ecc71
-}
-
-.forgot {
-    text-decoration: underline
-}
-.mimg{
-  width:80%;
-  height:500px;
-}
-#main{
-  width:75%;
-  height: 500px;
-}
-    </style>
-  </head>
-  <body>
-    {% include "db/navbar.html" %}
-    <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <form class="box" method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
-                    <h1>SIGNUP</h1>
-                    <p class="text-muted"> Please enter your details to create account !</p>
-
-                          {% render_field userForm.username class="form-control" placeholder="Username" %}
-                            {% render_field userForm.password class="form-control" placeholder="Password" %}
-                            <div class="email">
-                                {% render_field customerForm.email class="form-control" placeholder="Email" %}
-
-                            </div>
-
-                                {% render_field customerForm.mobile class="form-control" placeholder="Mobile" %}
-
-                     <input type="submit" name="" value="Create">
-
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="clearfix"></div>
+<!-- Slider -->
 <div id="main" role="main">
 	<section class="slider">
 		<ul class="slides">
 				<li>
-					<img class="mimg"alt="img" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/HomePageSlider-Img1.jpg">
+					<img alt="img" src="http://vigilanttechnologies.in/wp-content/uploads/2019/01/HomePageSlider-Img1.jpg">
 					<div class="container">
 						<div class="slide-caption">
 														<h2>Experts in Building Management Solutions</h2>
@@ -586,6 +468,4 @@ var _wpcf7 = {"loaderUrl":"http:\/\/vigilanttechnologies.in\/wp-content\/plugins
 <script type="text/javascript" src="http://vigilanttechnologies.in/wp-includes/js/wp-embed.min.js?ver=4.5.1"></script>
 
 
-
-  </body>
-</html>
+{% endblock content %}

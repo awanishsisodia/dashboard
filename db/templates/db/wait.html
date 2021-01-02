@@ -1,0 +1,11 @@
+{% extends 'db/newuserbase.html' %}
+{% load static %}
+{% block content %}
+<style media="screen">
+  h2{
+    text-align:center;
+  }
+</style>
+<h2> OOPS! Your Profile is under veryification. Please comeback soon</h2>
+<img src="{% static "images/images.jpg" %}"  style="width:800px; height:150px; padding-left:400px;">
+{% endblock %}

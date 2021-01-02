@@ -98,7 +98,7 @@
 <body style="background-color: #B3E5FC;">
 
   {%if request.user.is_authenticated%}
-    {% include "db/customer_navbar.html" %}
+    {% include "db/customer_base.html" %}
   {%else%}
     {% include "db/navbar.html" %}
   {%endif%}

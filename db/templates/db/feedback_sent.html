@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
 {% load widget_tweaks %}
-
+<style media="screen">
+.sent{
+   margin-left: 45%;
+}
+</style>
 
 
   {%if request.user.is_authenticated%}
-    {% include "db/customer_navbar.html" %}
+    {% include "db/customer_base.html" %}
   {%else%}
     {% include "db/navbar.html" %}
   {%endif%}
 <br><br><br>
 <h3 style="color:blue;text-align:center;">Your Feedback Sent Succesfully !</h3>
 <br>
-<div style="text-align:center;">
+<div class="sent">
   <img src="{% static "images/success.png" %}"  style="width:100px; height:100px; ">
 </div>
 

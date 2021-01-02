@@ -1,305 +1,143 @@
-<html>
-{% load static %}
-<head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<!-- jQuery library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<html lang="en-US"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Dashboard</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<style>
-body {
-    background-color: #ebe0e0
-}
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-#navbar {
-    background-color: #000;
-    color: black;
-}
-
-.row1 {
-    padding-top: 10px;
-    padding-right: 50px
-}
-
-.row2 {
-    padding-bottom: 20px
-}
-
-.navbar-input {
-    padding: 11px 16px;
-    border-radius: 2px 0 0 2px;
-    border: 0 none;
-    outline: 0 none;
-    font-size: 15px
-}
-
-.navbar-button {
-    background-color: #ffe11b;
-    border: 1px solid #ffe11b;
-    border-radius: 0 2px 2px 0;
-    color: #565656;
-    padding: 10px 0;
-    height: 43px;
-    cursor: pointer
-}
-
-.cart-button {
-    background-color: #808080;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
-    padding: 10px 0;
-    text-align: center;
-    height: 41px;
-    border-radius: 2px;
-    font-weight: 500;
-    width: 120px;
-    display: inline-block;
-    color: #FFFFFF;
-    text-decoration: none;
-    color: inherit;
-    border: none;
-    outline: none
-}
-
-.cart-button:hover {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer
-}
-
-.cart-svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 8px
-}
-
-.item-number {
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, .1);
-    height: 20px;
-    padding: 3px 6px;
-    font-weight: 500;
-    display: inline-block;
-    color: #fff;
-    line-height: 12px;
-    margin-left: 10px
-}
-
-.upper-links {
-    display: inline-block;
-    padding: 0 11px;
-    line-height: 23px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0;
-    color: inherit;
-    border: none;
-    outline: none;
-    font-size: 12px
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0px
-}
-
-.dropdown:hover {
-    background-color: #fff
-}
-
-.dropdown:hover .links {
-    color: #000
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block
-}
-
-.dropdown .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    display: none;
-    background-color: #fff;
-    color: #333;
-    left: 0px;
-    border: 0;
-    border-radius: 0;
-    box-shadow: 0 4px 8px -3px #555454;
-    margin: 0;
-    padding: 0px
-}
-
-.links {
-    color: #fff;
-    text-decoration: none
-}
-
-.links:hover {
-    color: #fff;
-    text-decoration: none
-}
-
-.profile-links {
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    border-bottom: 1px solid #e9e9e9;
-    box-sizing: border-box;
-    display: block;
-    padding: 0 11px;
-    line-height: 23px
-}
-
-.profile-li {
-    padding-top: 2px
-}
-
-.largenav {
-    display: none
-}
-
-.smallnav {
-    display: block
-}
-
-.smallsearch {
-    margin-left: 15px;
-    margin-top: 15px
-}
-
-.menu {
-    cursor: pointer
-}
-
-        /*---------------------------------------
-           Social section
-        -----------------------------------------*/
-        footer {
-          padding: 0px 0px 0px 0px;
-          background-color: black;
-          margin: 0px;
-        }
-
-
-        #ftr {
-
-          padding: 20px;
-        }
-
-        .fa {
-
-          font-size: 23px;
-          width: 60px;
-          text-align: center;
-          text-decoration: none;
-          margin: 5px 2px;
-          border-radius: 50%;
-        }
-
-        .fa:hover {
-          opacity: 0.5;
-          text-decoration: none;
-        }
-
-        .fa-facebook {
-          background: #3B5998;
-          color: white;
-          margin-top: 30px;
-        }
-
-        .fa-whatsapp {
-          background: #25d366;
-          color: white;
-        }
-
-        .fa-twitter {
-          background: #55ACEE;
-          color: white;
-        }
-
-        .fa-instagram {
-          background: #125688;
-          color: white;
-        }
-
-        p {
-          text-align: center;
-
-        }
-
-
-@media screen and (min-width: 768px) {
-    .largenav {
-        display: block
-    }
-
-    .smallnav {
-        display: none
-    }
-
-    .smallsearch {
-        margin: 0px
-    }
+<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+<title>Vigilant Technologies – Provider of products, solutions and services for physical safety and security management</title>
+<link rel="alternate" type="application/rss+xml" title="Vigilant Technologies » Feed" href="http://vigilanttechnologies.in/feed/">
+<link rel="alternate" type="application/rss+xml" title="Vigilant Technologies » Comments Feed" href="http://vigilanttechnologies.in/comments/feed/">
+		<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/UFwvoDBMjc8LiYc1DKXiAomK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-K2LYnZEtBUcW6O6eiKyrX5HgXfaBzWmW7BmI0mEp+JFPi3pZyyiJwjMDjI12BtQg"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/vigilanttechnologies.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="http://vigilanttechnologies.in/wp-includes/js/wp-emoji-release.min.js?ver=4.5.1" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
 }
 </style>
+<link rel="stylesheet" id="wa_chpcs_style-css" href="http://vigilanttechnologies.in/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/css/custom-style.css?ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="http://vigilanttechnologies.in/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.4.2" type="text/css" media="all">
+<link rel="stylesheet" id="font_awsome_frontend-css" href="http://vigilanttechnologies.in/wp-content/plugins/forms-contact/style/iconfonts/css/font-awesome.css?ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="busiprof-fonts-css" href="//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700%2C800%7CMontserrat%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%7CRoboto%3A+100%2C300%2C400%2C500%2C700%2C900%7CRaleway+%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CDroid+Serif%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="http://vigilanttechnologies.in/wp-content/themes/busiprof/style.css?ver=4.5.1" type="text/css" media="all">
+<style id="style-inline-css" type="text/css">
+.service-box:nth-child(1) .service-icon {
+                            color: #e91e63;
+				}.service-box:nth-child(2) .service-icon {
+                            color: #00bcd4;
+				}.service-box:nth-child(3) .service-icon {
+                            color: #4caf50;
+				}.service-box:nth-child(4) .service-icon {
+                            color: #5ca2df;
+				}
+</style>
+<link rel="stylesheet" id="bootstrap-css-css" href="http://vigilanttechnologies.in/wp-content/themes/busiprof/css/bootstrap.css?ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="custom-css-css" href="http://vigilanttechnologies.in/wp-content/themes/busiprof/css/custom.css?ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="flexslider-css-css" href="http://vigilanttechnologies.in/wp-content/themes/busiprof/css/flexslider.css?ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="busiporf-Droid-css" href="//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700&amp;ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="busiporf-Montserrat-css" href="//fonts.googleapis.com/css?family=Montserrat%3A400%2C700&amp;ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="busiporf-Droid-serif-css" href="//fonts.googleapis.com/css?family=Droid+Serif%3A400%2C400italic%2C700%2C700italic&amp;ver=4.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css-css" href="http://vigilanttechnologies.in/wp-content/themes/busiprof/css/font-awesome/css/font-awesome.min.css?ver=4.5.1" type="text/css" media="all">
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-includes/js/jquery/jquery.js?ver=1.12.3"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.0"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.transit.min.js?ver=4.5.1"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.carouFredSel-6.2.1-packed.js?ver=4.5.1"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/caroufredsel/jquery.touchSwipe.min.js?ver=4.5.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var chpcsArgs = {"auto_scroll":"false","circular":"false","easing_effect":"linear","item_align":"center","direction":"left","touch_swipe":"false","item_width":"180","time_out":"3000","duration":"500","css_transition":"false","infinite":"true","fx":"scroll"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/carousel-horizontal-posts-content-slider/assets/js/script.js?ver=4.5.1"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var huge_it_obj = {"nonce":"b4cc267178"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/forms-contact/js/recaptcha_front.js?ver=4.5.1"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/wonderplugin-carousel/engine/wonderplugincarouselskins.js?ver=8.4"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/plugins/wonderplugin-carousel/engine/wonderplugincarousel.js?ver=8.4"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/themes/busiprof/js/bootstrap.min.js?ver=4.5.1"></script>
+<script type="text/javascript" src="http://vigilanttechnologies.in/wp-content/themes/busiprof/js/custom.js?ver=4.5.1"></script>
+<link rel="https://api.w.org/" href="http://vigilanttechnologies.in/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://vigilanttechnologies.in/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://vigilanttechnologies.in/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.5.1">
+<link rel="icon" href="http://vigilanttechnologies.in/wp-content/uploads/2018/12/Logo-150x150.jpg" sizes="32x32">
+<link rel="icon" href="http://vigilanttechnologies.in/wp-content/uploads/2018/12/Logo.jpg" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://vigilanttechnologies.in/wp-content/uploads/2018/12/Logo.jpg">
+<meta name="msapplication-TileImage" content="http://vigilanttechnologies.in/wp-content/uploads/2018/12/Logo.jpg">
+
 </head>
-<body>
-<div id="navbar">
-    <div class="container">
-        <div class="row row1">
-            <ul class="largenav pull-right">
+<body class="home blog">
 
-                <li class="upper-links"><a class="links" href="/camera-dashboard">Camera Dashboard</a></li>
-                <li class="upper-links"><a class="links" href="/my-profile">Profile</a></li>
-                  <li class="upper-links"><a class="links" href="/logout">Logout</a></li>
-                <li class="upper-links dropdown"><a class="links" href="">More</a>
-                    <ul class="dropdown-menu">
-                      <li class="profile-li"><a class="profile-links" href="/send-feedback">Send Feedback</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/contactus">Contact Us</a></li>
-                        <li class="profile-li"><a class="profile-links" href="/aboutus">About Us</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="row row2">
-            <div class="col-sm-2">
-                <h2 style="margin:0px;"><a style="text-decoration:none; color:white;" href="/"><span class="largenav">User </span></a></h2>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display --><div class="col-sm-12 col-md-3">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://vigilanttechnologies.in/">
+								<img alt="Vigilant Technologies" src="http://vigilanttechnologies.in/wp-content/uploads/2018/12/Logo.jpg" class="logo_imgae" style="width:150px; height:120px;">
+							</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div></div><div class="col-sm-12 col-md-9">		<div class="col-md-4">&nbsp;		</div>		<div class="col-md-3">&nbsp;		</div>		<div class="col-md-5" style="font-size:14px; font-weight:bold;">
+		<!--div style="float:right; font-size:14px; font-weight:bold; margin-bottom:10px;"-->
+			Call Us: +91 80 43715698 / +91 80 23330237<br>E-mail: <a href="mailto:sales@vigilanttechnologies.in">sales@vigilanttechnologies.in</a>
+		</div>
+	<div class="col-sm-12 col-md-12">
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul id="menu-top-menu" class="nav navbar-nav navbar-right"><li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-39 active"><a href="http://vigilanttechnologies.in/">Home</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42 dropdown"><a href="http://vigilanttechnologies.in/products/">Products<span class="caret"></span></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="http://vigilanttechnologies.in/products/video-surveillance-systems/">Video Surveillance Systems</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="http://vigilanttechnologies.in/products/entrance-access-control/">Entrance Access Control</a></li>
+	<li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-223"><a href="http://vigilanttechnologies.in/products/access-control/">Access Control</a></li>
+	<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a href="http://vigilanttechnologies.in/products/fire-solution/">Fire Solution</a></li>
+</ul>
+</li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/camera-dashboard">Camera DashBoard</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/my-profile">Profile</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="/logout">Logout</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42 dropdown"><a href="">More<span class="caret"></span></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="http://vigilanttechnologies.in/solutions/">Solutions</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="/send-feedback">Send Feedback</a></li>
 
-
-
-
-
-        </div>
-    </div>
-</div>
-<!-- content start-->
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="http://vigilanttechnologies.in/about-us/">About Us</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://vigilanttechnologies.in/contact-us/">Contact Us</a></li>
+</ul>
+		</div>	</div>	</div>
+	</div>
+</nav>
 {% block content %}
 
-{% endblock content %}
-<!-- content end-->
-<br><br><br>
-
-<script>
-$(document).ready(function(){
-
-function openNav() {
-document.getElementById("mySidenav").style.width = "70%";
-
-document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav() {
-document.getElementById("mySidenav").style.width = "0";
-document.body.style.backgroundColor = "rgba(0,0,0,0)";
-}
-
-
-});
-</script>
-
+    
+    <script>
+    $(document).ready(function(){
+      {% block jquery %}{% endblock %}
+    })</script>
+    {% endblock %}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>
-</html>

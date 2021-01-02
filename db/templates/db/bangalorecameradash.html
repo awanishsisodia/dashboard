@@ -1,4 +1,4 @@
-{% extends 'db/customer_base.html' %}
+{% extends 'db/bangalorebase.html' %}
 {% load static %}
   {% block content %}
 <head>
@@ -41,7 +41,7 @@
 
   {% block jquery %}
 
-  var endpoint = 'camera-dashboard'
+  var endpoint = 'bang-camera-dashboard'
 
   $.ajax({
     method:"GET",
@@ -98,7 +98,7 @@
   })
     </script>
     <script>
-      var endpoint = 'camera-dashboard'
+      var endpoint = 'bang-camera-dashboard'
 
       $.ajax({
         method:"GET",

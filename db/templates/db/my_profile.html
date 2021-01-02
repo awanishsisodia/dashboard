@@ -5,7 +5,7 @@
 
 <style media="screen">
   body {
-    background-color:#8c9eff;
+    background-color:#FFFFFF;
   }
   .button {
   display: inline-block;
@@ -52,12 +52,10 @@
 <br><br><br>
 <div style="padding-left:300px;" class="container">
 
-        <div class="col-sm-2 col-md-2">
-            <img src="{% static customer.profile_pic.url %}"   alt="profile pic" class="img-rounded img-responsive" />
-        </div>
+
         <div class="col-sm-4 col-md-4">
             <blockquote>
-                <p>{{request.user}}</p> <small><cite title="Source Title">{{customer.address}}  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+                <p>{{request.user}}</p> <small><cite title="Source Title">{{customer.email}}  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
             </blockquote>
             <p> <i class="glyphicon glyphicon-phone"></i> {{customer.mobile}}
             </p>
